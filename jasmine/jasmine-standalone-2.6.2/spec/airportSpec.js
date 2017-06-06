@@ -7,19 +7,3 @@
 // As an air traffic controller
 // So I can get passengers to a destination
 // I want to instruct a plane to land at an airport and confirm that it has landed
-
-
-describe('Aiport', function() {
-
-  var airport;
-  beforeEach(function() {
-    airport = new Airport();
-  });
-
-  describe('Lands a plane', function() {
-
-    it('Stores a plane in planes array', function() {
-      expect(airport.landsPlane(plane)).toEqual([plane]);
-    });
-  });
-});
