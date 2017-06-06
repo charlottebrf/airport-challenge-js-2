@@ -1,4 +1,3 @@
-
 'use strict';
 
 describe('Airport feature test', function() {

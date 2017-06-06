@@ -1,9 +1,17 @@
-// it "Adds 'plane' to '@planes' when passed to 'land_plane'" do
-//   plane = double(:plane)
-//   subject.weather = :sunny
-//   expect(subject.land_plane(plane)).to eq [plane]
-// end
+'use strict';
 
-// As an air traffic controller
-// So I can get passengers to a destination
-// I want to instruct a plane to land at an airport and confirm that it has landed
+describe('Airport', function(){
+  var airport;
+  var plane;
+  beforeEach(function(){
+    airport = new Airport();
+    plane = jasmine.createSpy('plane',['land']);
+  });
+  it('has no planes by default', function(){
+    expect(airport.planes()).toEqual([]);
+  });
+  it('can clear planes for landing', function(){
+    airport.clearForLanding(plane);
+    expect(airport.planes()).toEqual([plane]);
+  });
+});
